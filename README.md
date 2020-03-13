@@ -11,6 +11,7 @@ mvn spring-boot:run
 #### GET : 
 ```
 http://localhost:8080/sample
+http://localhost:8080/sample?name=akshat
 ```
 
 #### POST : 

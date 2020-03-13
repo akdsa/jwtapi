@@ -1,5 +1,6 @@
 package com.example.jwtapi.simplerestapis.controller;
 
+import com.example.jwtapi.okta.createverifytokens.JWTDemo;
 import com.example.jwtapi.simplerestapis.models.SampleResponse;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -14,7 +15,7 @@ import com.example.jwtapi.simplerestapis.models.PostResponse;
 @RestController
 public class WebController {
 
-    @RequestMapping("/sample")
+    @RequestMapping(value = "/sample", method = RequestMethod.GET)
     public SampleResponse Sample(@RequestParam(value = "name",
             defaultValue = "Akshat") String name) {
         SampleResponse response = new SampleResponse();
@@ -32,5 +33,28 @@ public class WebController {
         response.setExtra("Some text");
         return response;
     }
+
+//    String jwtId = "SOMEID1234";
+//    String jwtIssuer = "JWT Demo";
+//    String jwtSubject = "Andrew";
+//    long jwtTimeToLive = 800000000; //92 days
+//
+//    String jwt = JWTDemo.createJWT(
+//            jwtId, // claim = jti
+//            jwtIssuer, // claim = iss
+//            jwtSubject, // claim = sub
+//            jwtTimeToLive // used to calculate expiration (claim = exp)
+//    );
+
+    /**
+     * 1. Add port request
+     * 2. Add Post response
+     * 3. Add a methods in Web Controller
+     * 4. publish and test
+     */
+
+
+
+
 
 }
