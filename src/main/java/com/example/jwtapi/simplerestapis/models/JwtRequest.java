@@ -7,7 +7,7 @@ import io.swagger.annotations.ApiModelProperty;
 public class JwtRequest {
 
     @ApiModelProperty(notes = "This is the ID")
-    String jwtId;
+    String cdsId;
 
     @ApiModelProperty(notes = "Token issuer name")
     String jwtIssuer;
@@ -15,8 +15,8 @@ public class JwtRequest {
     @ApiModelProperty(notes = "Token subject")
     String jwtSubject;
 
-    public void setJwtId(String jwtId){
-        this.jwtId = jwtId;
+    public void setCdsId(String cdsId){
+        this.cdsId = cdsId;
     }
 
     public void setJwtIssuer(String jwtIssuer){
@@ -27,8 +27,8 @@ public class JwtRequest {
         this.jwtSubject = jwtSubject;
     }
 
-    public String getJwtId(){
-        return jwtId;
+    public String getCdsId(){
+        return cdsId;
     }
 
     public String getJwtIssuer(){

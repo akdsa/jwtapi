@@ -39,7 +39,7 @@ public class WebController {
 
         response.setJwtToken(
                 JWTDemo.createJWT(
-                inputPayload.getJwtId(), // claim = jti
+                inputPayload.getCdsId(), // claim = jti
                 inputPayload.getJwtIssuer(), // claim = iss
                 inputPayload.getJwtSubject(), // claim = sub
                 800000000 // used to calculate expiration (claim = exp)
