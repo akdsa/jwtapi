@@ -1,7 +1,7 @@
 package com.example.jwtapi.simplerestapis.controller;
 
 import com.example.jwtapi.okta.createverifytokens.JWTDemo;
-import com.example.jwtapi.simplerestapis.models.SampleResponse;
+import com.example.jwtapi.simplerestapis.models.*;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -9,10 +9,8 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.example.jwtapi.simplerestapis.models.PostRequest;
-import com.example.jwtapi.simplerestapis.models.PostResponse;
-
 @RestController
+@RequestMapping("/jwt/api")
 public class WebController {
 
     @RequestMapping(value = "/sample", method = RequestMethod.GET)
@@ -33,6 +31,17 @@ public class WebController {
         response.setExtra("Some text");
         return response;
     }
+
+    @RequestMapping(value = "/token", method = RequestMethod.POST)
+    public JwtResponse getJwtToken(@RequestBody JwtRequest inputPayload){
+        JwtResponse response = new JwtResponse();
+        response.setJwtId(inputPayload.getJwtId());
+        response.setJwtIssuer(inputPayload.getJwtIssuer());
+        response.setJwtSubject(inputPayload.getJwtSubject());
+        response.setJwtTimeToLive(800000000);
+        return response;
+    }
+
 
 //    String jwtId = "SOMEID1234";
 //    String jwtIssuer = "JWT Demo";
