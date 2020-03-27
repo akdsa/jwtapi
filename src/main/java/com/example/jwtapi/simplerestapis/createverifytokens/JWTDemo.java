@@ -1,4 +1,4 @@
-package com.example.jwtapi.okta.createverifytokens;
+package com.example.jwtapi.simplerestapis.createverifytokens;
 
 import javax.crypto.spec.SecretKeySpec;
 import javax.xml.bind.DatatypeConverter;
@@ -10,10 +10,12 @@ import java.util.Date;
 
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.Claims;
+import org.springframework.stereotype.Service;
 
 /*
     Our simple static class that demonstrates how to create and decode JWTs.
  */
+@Service
 public class JWTDemo {
 
     // The secret key. This should be in a property file NOT under source
