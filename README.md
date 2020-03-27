@@ -1,12 +1,29 @@
 # jwtapi
 
-### 1. Simple rest api
-REST API to generate JWT tokens. The api is under development but can be cloned for further development.
+### 1. Generate JWT token
 
-Clone the repo and run below cmd -
+This is a REST API project to generate JWT tokens in Java using Spring Boot 2.2.6
+
+To run the project in local, clone the repo and execute below cmd -
 ```Java
 mvn spring-boot:run
 ```
+It is integrated with Swagger for detailed documentation.
+* [JWT API Swagger UI](http://localhost:8080/swagger-ui.html#/)
+
+#### POST :
+```
+http://localhost:8080/jwt/api/token
+Body
+   {
+     "cdsId": "string",
+     "jwtIssuer": "string",
+     "jwtSubject": "string"
+   }
+```
+
+### 2. Simple rest api
+This is a sample API for your won learning. It has a GET and a POST method.
 
 #### GET : 
 ```
@@ -24,22 +41,7 @@ Body
     }
 ```
 
-### 2. Generate JWT token
 
-Navigate to JWTDemoTest.java and run tests from your IDE.
-
-* [JWT API Swagger UI](http://localhost:8080/swagger-ui.html#/)
-
-#### POST :
-```
-http://localhost:8080/jwt/api/token
-Body
-   {
-     "cdsId": "string",
-     "jwtIssuer": "string",
-     "jwtSubject": "string"
-   }
-```
 
 ### 3. Reference blogs:
 * [How to create simple rest apis with springboot](https://adityasridhar.com/posts/how-to-create-simple-rest-apis-with-springboot)
