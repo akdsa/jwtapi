@@ -14,7 +14,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 import java.util.Collections;
 
-@SpringBootApplication
+@SpringBootApplication(exclude = {ErrorMvcAutoConfiguration.class, UserDetailsServiceAutoConfiguration.class})
 @EnableSwagger2
 public class SimpleRestApisApplication {
 
@@ -26,8 +26,6 @@ public class SimpleRestApisApplication {
 	public Docket swaggerConfig(){
 		return new Docket(DocumentationType.SWAGGER_2)
 				.select()
-//				.paths(PathSelectors.ant("/api/*"))
-//				.apis(RequestHandlerSelectors.basePackage("io.javabrains"))
 				.build()
 				.apiInfo(apiDetails());
 	}

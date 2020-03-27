@@ -1,4 +1,4 @@
-package com.example.jwtapi.okta.createverifytokens;
+package com.example.jwtapi.simplerestapis.createverifytokens;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.MalformedJwtException;
