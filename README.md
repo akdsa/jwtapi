@@ -10,15 +10,13 @@ mvn spring-boot:run
 
 #### GET : 
 ```
-http://localhost:8080/sample
-http://localhost:8080/sample?name=akshat
+http://localhost:8080/jwt/api/sample
+http://localhost:8080/jwt/api/sample?name=akshat
 ```
 
 #### POST : 
 ```
-http://localhost:8080/test
-```
-```
+http://localhost:8080/jwt/api/test
 Body
     {
 	    "id": 1,
@@ -29,6 +27,19 @@ Body
 ### 2. Generate JWT token
 
 Navigate to JWTDemoTest.java and run tests from your IDE.
+
+* [JWT API Swagger UI](http://localhost:8080/swagger-ui.html#/)
+
+#### POST :
+```
+http://localhost:8080/jwt/api/token
+Body
+   {
+     "cdsId": "string",
+     "jwtIssuer": "string",
+     "jwtSubject": "string"
+   }
+```
 
 ### 3. Reference blogs:
 * [How to create simple rest apis with springboot](https://adityasridhar.com/posts/how-to-create-simple-rest-apis-with-springboot)
