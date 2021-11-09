@@ -43,6 +43,6 @@ Body
 
 
 
-### 3. Reference blogs:
+### 3. Reference blogs
 * [How to create simple rest apis with springboot](https://adityasridhar.com/posts/how-to-create-simple-rest-apis-with-springboot)
 * [Tutorial: Create and Verify JWTs in Java](https://developer.okta.com/blog/2018/10/31/jwts-with-java)
